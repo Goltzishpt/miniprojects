@@ -1,0 +1,13 @@
+n = int(input())
+counter = 0
+multi = 1
+summ = 0
+num2 = n % 10
+while n != 0:
+    num1 = n % 10
+    counter += 1
+    multi *= num1
+    summ += num1
+    n = n // 10
+summ2 = num2 + num1
+print(summ, counter, multi, summ/counter, num1, summ2, sep = '\n')
