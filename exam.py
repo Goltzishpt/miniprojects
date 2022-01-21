@@ -2,11 +2,5 @@
 # проверка связи
 
 
-n = int(input())
-l = []
-for i in range(n):
-    x = int(input())
-    l.append(x)
-del l[l.index(min(l))]
-del l[l.index(max(l))]
-print(*l, sep = '\n')
+l = [int(input()) for _ in range(int(input()))]
+print(*list(filter(lambda x: str(x) != str(max(l)) and str(x) != str(min(l)), l)), sep='\n')
