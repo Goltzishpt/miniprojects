@@ -1,0 +1,14 @@
+# Интересные числа
+# На вход программе подаются два натуральных числа aa и bb. Напишите программу с использованием встроенной функции all() 
+# для обнаружения всех целых чисел в диапазоне [a; \, b][a;b], которые делятся на каждую содержащуюся в них цифру без остатка.
+
+
+def check(x):
+    return all(map(lambda j: j != '0' and int(x) % int(j) == 0, x))
+
+
+a, b = int(input()), int(input())
+digit_list = [str(i) for i in range(a, b+1)]
+
+print(*list(filter(lambda x: check(x), digit_list)))
+
