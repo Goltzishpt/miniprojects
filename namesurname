@@ -1,0 +1,9 @@
+# рандомно печатает 3 строки с именем и фамилией из списков
+
+import random
+
+
+with open('first_names.txt', 'r') as name, open('last_names.txt', 'r') as surname:
+    first, second = name.read().split(), surname.read().split()
+    for _ in range(3):
+        print(f'{random.choice(first)} {random.choice(second)}')
