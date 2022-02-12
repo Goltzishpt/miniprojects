@@ -1,0 +1,7 @@
+# ввод и вывод с файлов
+
+
+with open('input.txt', 'r+', encoding='utf-8') as input, open('output.txt', 'w', encoding='utf-8') as output:
+    line = input.readlines()
+    for row, dig in enumerate(line, 1):
+        print(f'{row}) {dig.strip()}', file=output)
